@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="356.0" prefWidth="384.0" stylesheets="telasFX/produtoFXML.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="telasFX.ProdutoFXMLController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button contentDisplay="CENTER" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="161.0" text="Cadastrar Veículos">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" graphicTextGap="10.0" layoutX="122.0" layoutY="169.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="161.0" text="Cadastrar Clientes">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" graphicTextGap="10.0" layoutX="122.0" layoutY="188.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="161.0" text="Cadastrar Locação">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" graphicTextGap="10.0" layoutX="122.0" layoutY="207.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="161.0" text="Relatórios">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
