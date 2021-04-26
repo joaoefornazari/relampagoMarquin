@@ -5,82 +5,9 @@ Sistema de locação de carros para a disciplina de Programação de Aplicativos
 
 ## Tela Inicial [FEITO]
 
-•	4 botões que levam para cada uma das telas:
-•	Cadastro de veículos;
-
-•	Cadastro de clientes;
-
-•	Cadastro de locação;
-
-•	Relatórios;
-
 ## Tela Cadastro de Veículos [FEITO]
 
-•	Campos de texto para os dados
-
-◦	Número do RENAVAN;
-
-◦	Número da placa;
-
-◦	Modelo;
-
-◦	Marca;
-
-◦	Ano de fabricação;
-
-◦	Valor de indenização do seguro;
-
-◦	tempo para realização da manutenção preventiva;
-
-◦	Km atual;
-
-◦	Preço da diária, semanal, quinzenal, mensal, por hora e por hora excedente
-
-◦	Informações técnicas;
-
-•	Imagem do veículo;
-
 ## Tela Cadastro de Clientes [FEITO]
-
-•	Opção para escolher se é cliente físico ou jurídico;
-
-•	Tipo do cliente:
-
-◦	Físico – dados:
-
-▪	Nome;
-
-▪	Data de nascimento;
-
-▪	Status (ativo, inativo ou bloqueado);
-
-•	Motivo do bloqueio (inadimplência, cobrança extrajudicial, cobrança judicial ou problemas cadastrais);
-
-▪	CPF;
-
-▪	RG;
-
-▪	Endereço completo;
-
-▪	Observação;
-
-◦	Jurídico – dados:
-
-▪	Nome fantasia;
-
-▪	Status (ativo, inativo ou bloqueado);
-
-•	Motivo do bloqueio (inadimplência, cobrança extrajudicial, cobrança judicial ou problemas cadastrais);
-
-▪	CNPJ;
-
-▪	Inscrição Estadual;
-
-▪	Endereço completo;
-
-▪	Observação;
-
-•	Botão que leva a tela de cadastro de condutor;
 
 ## Tela Cadastro de Motorista
 
