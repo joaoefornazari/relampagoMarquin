@@ -40,7 +40,7 @@ Sistema de locação de carros para a disciplina de Programação de Aplicativos
 
 •	Imagem do veículo;
 
-## Tela Cadastro de Clientes
+## Tela Cadastro de Clientes [FEITO]
 
 •	Opção para escolher se é cliente físico ou jurídico;
 
