@@ -9,14 +9,7 @@ Sistema de locação de carros para a disciplina de Programação de Aplicativos
 
 ## Tela Cadastro de Clientes [FEITO]
 
-## Tela Cadastro de Motorista
-
-•	Condutor – dados:
-
-◦	Número e tipo da carteira de Habilitação do condutor;
-
-◦	Contatos, telefones e E-mail;
-
+## Tela Cadastro de Motorista [FEITO]
 
 ## Tela Cadastro de Locação
 
