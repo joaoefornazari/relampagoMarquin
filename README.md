@@ -20,36 +20,15 @@ Sistema de locação de carros para a disciplina de Programação de Aplicativos
 
 ## Tela Cadastro de Locação
 
-### Locação:
-◦	Seleção do cliente;
+### Locação [FEITO]
 
-•	Buscar um cliente já cadastrado OU
+### Seleção do condutor [FEITO]
 
-•	Incluir um cliente novo OU
+### Seleção do veículo [FEITO]
 
-•	Atualizar os dados de um cliente selecionado;
+### Tela de exibição da locação escolhida
 
-▪	Quando o cliente possui status Inativo, o sistema deve avisar o atendente, forçando que seus dados cadastrais sejam conferidos.
-
-▪	Quando o cliente está bloqueado um aviso é mostrado.
-
-
-### Seleção do condutor;
-•	Possível buscar os diversos condutores já cadastrados para o cliente OU
-
-•	Incluir novos condutores;
-
-▪	Opção padrão =  primeiro condutor cadastrado junto com os dados do cliente.
-
-
-### Seleção do veículo;
-•	Buscar os veículos por Renavan ou por placa;
-
-◦	Veículo com manutenção vencida = um aviso será mostrado, mas a seleção não será impedida.
-
-•	Em seguida, a janela de seleção do tipo de locação (D – Locação por Diária; S – Locação por Semana; Q – Locação por Quinzena ou M – Locação por Mês) é apresentada;
-
-•	Então, tela com os dados da locação é apresentada com os seguintes dados:
+Então, tela com os dados da locação é apresentada com os seguintes dados:
 
 ◦	Código da locação;
 
