@@ -19,42 +19,7 @@ Sistema de locação de carros para a disciplina de Programação de Aplicativos
 
 ### Seleção do veículo [FEITO]
 
-### Tela de exibição da locação escolhida
-
-Então, tela com os dados da locação é apresentada com os seguintes dados:
-
-◦	Código da locação;
-
-◦	Renavan;
-
-◦	Placa;
-
-◦	Modelo;
-
-◦	Marca;
-
-◦	Ano;
-
-◦	Última quilometragem;
-
-◦	Tipo da locação (D, S, Q ou M);
-
-◦	Quantidade de diárias ou 1 para semana, quinzena ou mês;
-
-◦	Data da locação;
-
-◦	Data prevista para devolução;
-
-◦	Valor unitário da locação;
-
-◦	Valor do seguro;
-
-▪	Os valores do seguro são obtidos da tabela de preço dos veículos e servem como referência mas podem ser alterados.
-
-◦	Valor total;
-
-•	É possível ainda incluir um texto e um valor de acréscimo, como por exemplo seguro extra, e este valor será cobrado uma única vez no primeiro faturamento.
-
+### Tela de exibição da locação escolhida [FEITO]
 
 ### Impressão do comprovante de entrega do veículo
 ▪	Placa;
@@ -67,10 +32,8 @@ Então, tela com os dados da locação é apresentada com os seguintes dados:
 
 ▪	Valor da locação.
 
-
 ## Renovação de Locação:
 ◦	Digitar o número do contrato e clicar no botão BUSCAR: os itens locados no contrato serão apresentados e o usuário poderá escolher renovar por igual período ou renovar por período diferente;
-
 
 ## Devolução de veículo:
 ◦	Buscar o contrato que terá o veículo devolvido pelo nome do cliente ou pelo número do contrato;
