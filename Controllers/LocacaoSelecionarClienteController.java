@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controllers;
+package controllers;
 
 import java.io.IOException;
 import java.net.URL;
@@ -17,6 +17,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
@@ -74,7 +75,12 @@ public class LocacaoSelecionarClienteController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        final ToggleGroup tipoLoc = new ToggleGroup();
+        rbtnDiaria.setToggleGroup(tipoLoc);
+        rbtnDiaria.setSelected(true);
+        rbtnMensal.setToggleGroup(tipoLoc);
+        rbtnQuinzenal.setToggleGroup(tipoLoc);
+        rbtnSemanal.setToggleGroup(tipoLoc);
     }
 
     @FXML

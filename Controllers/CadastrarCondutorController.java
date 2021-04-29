@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controllers;
+package controllers;
 
 import java.io.IOException;
 import java.net.URL;
@@ -16,7 +16,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
@@ -69,13 +71,42 @@ public class CadastrarCondutorController implements Initializable {
     private Label lblTelC;
     @FXML
     private TextField txtTelC;
+    @FXML
+    private RadioButton rbtnA;
+    @FXML
+    private RadioButton rbtnB;
+    @FXML
+    private RadioButton rbtnC;
+    @FXML
+    private RadioButton rbtnD;
+    @FXML
+    private RadioButton rbtnE;
+    @FXML
+    private RadioButton rbtnAB;
+    @FXML
+    private RadioButton rbtnAC;
+    @FXML
+    private RadioButton rbtnAD;
+    @FXML
+    private RadioButton rbtnAE;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        final ToggleGroup tipoCarteira = new ToggleGroup();
+        rbtnA.setToggleGroup(tipoCarteira);
+        rbtnA.setSelected(true);
+        rbtnB.setToggleGroup(tipoCarteira);
+        rbtnC.setToggleGroup(tipoCarteira);
+        rbtnD.setToggleGroup(tipoCarteira);
+        rbtnE.setToggleGroup(tipoCarteira);
+        rbtnAB.setToggleGroup(tipoCarteira);
+        rbtnAC.setToggleGroup(tipoCarteira);
+        rbtnAD.setToggleGroup(tipoCarteira);
+        rbtnAE.setToggleGroup(tipoCarteira);
+        
     }
 
     @FXML

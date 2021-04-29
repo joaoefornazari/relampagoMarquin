@@ -6,11 +6,11 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="168.0" prefWidth="384.0" stylesheets="telasFX/produtoFXML.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="telasFX.ProdutoFXMLController">
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="168.0" prefWidth="384.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ConfirmacaoOperacaoController">
    <bottom>
-      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="384.0" spacing="10.0" BorderPane.alignment="CENTER">
+      <HBox fx:id="hbBottom" alignment="CENTER" prefHeight="60.0" prefWidth="384.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Button alignment="CENTER" defaultButton="true" minWidth="120.0" mnemonicParsing="false" text="OK" textAlignment="CENTER">
+            <Button fx:id="btnOk" alignment="CENTER" defaultButton="true" minWidth="120.0" mnemonicParsing="false" onAction="#confirmar" text="OK" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
@@ -19,9 +19,9 @@
       </HBox>
    </bottom>
    <center>
-      <HBox alignment="CENTER" prefHeight="270.0" prefWidth="384.0" BorderPane.alignment="CENTER">
+      <HBox fx:id="hbCenter" alignment="CENTER" prefHeight="270.0" prefWidth="384.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Operação realizada com sucesso!" textAlignment="CENTER">
+            <Label fx:id="lblMensagem" alignment="CENTER" contentDisplay="CENTER" text="Operação realizada com sucesso!" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
