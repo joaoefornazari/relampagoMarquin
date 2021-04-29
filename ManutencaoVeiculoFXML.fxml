@@ -11,9 +11,9 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="356.0" prefWidth="384.0" stylesheets="telasFX/produtoFXML.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="telasFX.ProdutoFXMLController">
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="356.0" prefWidth="384.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ManutencaoVeiculoController">
    <center>
-      <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
+      <GridPane fx:id="gpCenter" alignment="CENTER" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="128.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="176.0" />
@@ -24,7 +24,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label prefHeight="44.0" prefWidth="142.0" text="Indenização do seguro:" textAlignment="RIGHT" wrapText="true" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+            <Label fx:id="lblIndenizacao" prefHeight="44.0" prefWidth="142.0" text="Indenização do seguro:" textAlignment="RIGHT" wrapText="true" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
@@ -32,7 +32,8 @@
                   <Insets right="10.0" />
                </GridPane.margin>
             </Label>
-            <Label layoutX="10.0" layoutY="38.0" prefHeight="48.0" prefWidth="118.0" text="Manutenção preventiva:" textAlignment="RIGHT" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <TextField fx:id="txtIndenizacao" layoutX="202.0" layoutY="34.0" GridPane.columnIndex="1" />
+            <Label fx:id="lblManutencao" layoutX="10.0" layoutY="38.0" prefHeight="48.0" prefWidth="118.0" text="Manutenção preventiva:" textAlignment="RIGHT" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
@@ -40,7 +41,8 @@
                   <Insets right="10.0" />
                </GridPane.margin>
             </Label>
-            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="109.0" prefHeight="51.0" prefWidth="125.0" text="Km atual:" textAlignment="RIGHT" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <TextField fx:id="txtManutencao" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="lblKmAtual" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="109.0" prefHeight="51.0" prefWidth="125.0" text="Km atual:" textAlignment="RIGHT" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
@@ -48,9 +50,7 @@
                   <Insets right="10.0" />
                </GridPane.margin>
             </Label>
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField layoutX="202.0" layoutY="34.0" GridPane.columnIndex="1" />
-            <TextField layoutX="202.0" layoutY="105.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtKmAtual" layoutX="202.0" layoutY="105.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
          <opaqueInsets>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -64,14 +64,14 @@
       </GridPane>
    </center>
    <bottom>
-      <HBox alignment="CENTER" prefHeight="59.0" prefWidth="384.0" spacing="10.0" BorderPane.alignment="CENTER">
+      <HBox fx:id="hbBottom" alignment="CENTER" prefHeight="59.0" prefWidth="384.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Button alignment="CENTER" cancelButton="true" minWidth="120.0" mnemonicParsing="false" text="Voltar" textAlignment="CENTER">
+            <Button fx:id="btnVoltar" alignment="CENTER" cancelButton="true" minWidth="120.0" mnemonicParsing="false" onAction="#mudarCenaVoltar" text="Voltar" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" defaultButton="true" disable="true" minWidth="120.0" mnemonicParsing="false" text="Próximo" textAlignment="CENTER">
+            <Button fx:id="btnProx" alignment="CENTER" defaultButton="true" minWidth="120.0" mnemonicParsing="false" onAction="#mudarCenaProx" text="Próximo" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
@@ -80,9 +80,9 @@
       </HBox>
    </bottom>
    <top>
-      <HBox alignment="CENTER" prefHeight="45.0" prefWidth="384.0" BorderPane.alignment="CENTER">
+      <HBox fx:id="hbTop" alignment="CENTER" prefHeight="45.0" prefWidth="384.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Dados de Manutenção do Carro" textAlignment="CENTER">
+            <Label fx:id="lblDados" alignment="CENTER" contentDisplay="CENTER" text="Dados de Manutenção do Carro" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>

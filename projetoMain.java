@@ -22,12 +22,12 @@ public class projetoMain extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         
-        BorderPane root = FXMLLoader.load(getClass().getResource("ProdutoFXML.fxml"));
+        BorderPane root = FXMLLoader.load(getClass().getResource("projetoMainFXML.fxml"));
         
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setResizable(false);
-        stage.setTitle("Cadastrar Produto");
+        stage.setTitle("Locação de Veículos");
         stage.show();
     }
 

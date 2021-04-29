@@ -13,9 +13,9 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="388.0" prefWidth="384.0" stylesheets="telasFX/produtoFXML.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="telasFX.ProdutoFXMLController">
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="388.0" prefWidth="384.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CadastrarCondutorController">
    <center>
-      <GridPane alignment="CENTER" prefHeight="270.0" prefWidth="384.0" BorderPane.alignment="CENTER">
+      <GridPane fx:id="gpCenter" alignment="CENTER" prefHeight="270.0" prefWidth="384.0" BorderPane.alignment="CENTER">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="105.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.0" minWidth="10.0" prefWidth="169.0" />
@@ -29,56 +29,26 @@
             <RowConstraints maxHeight="86.0" minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <HBox alignment="CENTER" layoutX="176.0" layoutY="10.0" spacing="5.0">
+            <HBox fx:id="hbCnh" alignment="CENTER" layoutX="176.0" layoutY="10.0" spacing="5.0">
                <children>
-                  <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="53.0" prefWidth="137.0" text="CNH:" textAlignment="CENTER">
+                  <Label fx:id="lblCnh" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="53.0" prefWidth="137.0" text="CNH:" textAlignment="CENTER">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <TextField prefHeight="25.0" prefWidth="170.0" GridPane.columnIndex="1">
+            <TextField fx:id="txtCnh" prefHeight="25.0" prefWidth="170.0" GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets left="10.0" right="30.0" />
                </GridPane.margin>
             </TextField>
-            <Label alignment="CENTER_RIGHT" layoutX="45.0" layoutY="42.0" prefHeight="53.0" prefWidth="137.0" text="Data de vencimento:" textAlignment="CENTER" GridPane.rowIndex="2">
+            <Label fx:id="lblCat" alignment="CENTER_RIGHT" prefHeight="51.0" prefWidth="129.0" text="Categoria:" textAlignment="CENTER" GridPane.rowIndex="1">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <DatePicker prefWidth="158.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <GridPane.margin>
-                  <Insets left="10.0" />
-               </GridPane.margin>
-            </DatePicker>
-            <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="137.0" text="Telefone Residencial:" textAlignment="CENTER" GridPane.rowIndex="3">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <TextField layoutX="192.0" layoutY="46.0" prefHeight="25.0" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <GridPane.margin>
-                  <Insets left="10.0" right="30.0" />
-               </GridPane.margin>
-            </TextField>
-            <Label alignment="CENTER_RIGHT" layoutX="45.0" layoutY="170.0" prefHeight="53.0" prefWidth="137.0" text="Email:" textAlignment="CENTER" GridPane.rowIndex="5">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <TextField layoutX="192.0" layoutY="184.0" prefHeight="25.0" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
-               <GridPane.margin>
-                  <Insets left="10.0" right="30.0" />
-               </GridPane.margin>
-            </TextField>
-            <Label alignment="CENTER_RIGHT" prefHeight="51.0" prefWidth="129.0" text="Categoria:" textAlignment="CENTER" GridPane.rowIndex="1">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <GridPane prefHeight="80.0" prefWidth="198.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <GridPane fx:id="gpCat" prefHeight="80.0" prefWidth="198.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -108,12 +78,42 @@
                   <Insets left="10.0" />
                </GridPane.margin>
             </GridPane>
-            <Label alignment="CENTER_RIGHT" layoutX="45.0" layoutY="170.0" prefHeight="27.0" prefWidth="137.0" text="Telefone celular:" textAlignment="CENTER" GridPane.rowIndex="4">
+            <Label fx:id="lblDataVenc" alignment="CENTER_RIGHT" layoutX="45.0" layoutY="42.0" prefHeight="53.0" prefWidth="137.0" text="Data de vencimento:" textAlignment="CENTER" GridPane.rowIndex="2">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField layoutX="192.0" layoutY="171.0" prefHeight="25.0" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <DatePicker fx:id="dtpDataVenc" prefWidth="158.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </DatePicker>
+            <Label fx:id="lblTelR" alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="137.0" text="Telefone Residencial:" textAlignment="CENTER" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtTelR" layoutX="192.0" layoutY="46.0" prefHeight="25.0" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="10.0" right="30.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label fx:id="lblTelC" alignment="CENTER_RIGHT" layoutX="45.0" layoutY="170.0" prefHeight="27.0" prefWidth="137.0" text="Telefone celular:" textAlignment="CENTER" GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtTelC" layoutX="192.0" layoutY="171.0" prefHeight="25.0" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="10.0" right="30.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label fx:id="lblEmail" alignment="CENTER_RIGHT" layoutX="45.0" layoutY="170.0" prefHeight="53.0" prefWidth="137.0" text="Email:" textAlignment="CENTER" GridPane.rowIndex="5">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtEmail" layoutX="192.0" layoutY="184.0" prefHeight="25.0" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets left="10.0" right="30.0" />
                </GridPane.margin>
@@ -131,14 +131,14 @@
       </GridPane>
    </center>
    <bottom>
-      <HBox alignment="CENTER" prefHeight="59.0" prefWidth="384.0" spacing="10.0" BorderPane.alignment="CENTER">
+      <HBox fx:id="hbBottom" alignment="CENTER" prefHeight="59.0" prefWidth="384.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Button alignment="CENTER" cancelButton="true" minWidth="120.0" mnemonicParsing="false" text="Voltar" textAlignment="CENTER">
+            <Button fx:id="btnVoltar" alignment="CENTER" cancelButton="true" minWidth="120.0" mnemonicParsing="false" onAction="#mudarCenaCadCli" text="Voltar" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" defaultButton="true" disable="true" minWidth="120.0" mnemonicParsing="false" text="Cadastrar" textAlignment="CENTER">
+            <Button fx:id="btnCad" alignment="CENTER" defaultButton="true" minWidth="120.0" mnemonicParsing="false" onAction="#MudarCenaCad" text="Cadastrar" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
@@ -147,9 +147,9 @@
       </HBox>
    </bottom>
    <top>
-      <HBox alignment="CENTER" prefHeight="45.0" prefWidth="384.0" BorderPane.alignment="CENTER">
+      <HBox fx:id="hbTop" alignment="CENTER" prefHeight="45.0" prefWidth="384.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Dados do Condutor" textAlignment="CENTER">
+            <Label fx:id="lblDadosCond" alignment="CENTER" contentDisplay="CENTER" text="Dados do Condutor" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>

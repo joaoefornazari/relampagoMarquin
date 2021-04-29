@@ -5,26 +5,26 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="356.0" prefWidth="384.0" stylesheets="telasFX/produtoFXML.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="telasFX.ProdutoFXMLController">
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="356.0" prefWidth="384.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.projetoMainController">
    <center>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+      <VBox fx:id="vbCenter" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Button contentDisplay="CENTER" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="161.0" text="Cadastrar Veículos">
+            <Button fx:id="btnCadVc" contentDisplay="CENTER" graphicTextGap="10.0" mnemonicParsing="false" onAction="#mudarCenaCadVc" prefHeight="38.0" prefWidth="161.0" text="Cadastrar Veículos">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button contentDisplay="CENTER" graphicTextGap="10.0" layoutX="122.0" layoutY="169.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="161.0" text="Cadastrar Clientes">
+            <Button fx:id="btnCadCli" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="122.0" layoutY="169.0" mnemonicParsing="false" onAction="#mudarCenaCadCli" prefHeight="38.0" prefWidth="161.0" text="Cadastrar Clientes">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button contentDisplay="CENTER" graphicTextGap="10.0" layoutX="122.0" layoutY="188.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="161.0" text="Cadastrar Locação">
+            <Button fx:id="btnCadLoc" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="122.0" layoutY="188.0" mnemonicParsing="false" onAction="#mudarCenaCadLoc" prefHeight="38.0" prefWidth="161.0" text="Cadastrar Locação">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button contentDisplay="CENTER" graphicTextGap="10.0" layoutX="122.0" layoutY="207.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="161.0" text="Relatórios">
+            <Button fx:id="btnRelat" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="122.0" layoutY="207.0" mnemonicParsing="false" onAction="#mudarCenaRelat" prefHeight="38.0" prefWidth="161.0" text="Relatórios">
                <font>
                   <Font size="16.0" />
                </font>

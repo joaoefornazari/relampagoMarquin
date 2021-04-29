@@ -7,16 +7,16 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="356.0" prefWidth="384.0" stylesheets="telasFX/produtoFXML.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="telasFX.ProdutoFXMLController">
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="356.0" prefWidth="384.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ImagemVeiculoController">
    <bottom>
       <HBox alignment="CENTER" prefHeight="59.0" prefWidth="384.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Button alignment="CENTER" cancelButton="true" minWidth="120.0" mnemonicParsing="false" text="Voltar" textAlignment="CENTER">
+            <Button fx:id="btnVoltar" alignment="CENTER" cancelButton="true" minWidth="120.0" mnemonicParsing="false" onAction="#mudarCenaVoltar" text="Voltar" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" defaultButton="true" disable="true" minWidth="120.0" mnemonicParsing="false" text="Concluir" textAlignment="CENTER">
+            <Button fx:id="btnConcluir" alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#mudarCenaProx" text="Concluir" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
@@ -25,11 +25,11 @@
       </HBox>
    </bottom>
    <top>
-      <BorderPane prefHeight="93.0" prefWidth="384.0" BorderPane.alignment="CENTER">
+      <BorderPane fx:id="bpTop" prefHeight="93.0" prefWidth="384.0" BorderPane.alignment="CENTER">
          <top>
-            <HBox alignment="CENTER" prefHeight="48.0" prefWidth="384.0" BorderPane.alignment="CENTER">
+            <HBox fx:id="hbImagemVc" alignment="CENTER" prefHeight="48.0" prefWidth="384.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label alignment="CENTER" text="Imagem do Veículo" textAlignment="CENTER">
+                  <Label fx:id="lblImagemVc" alignment="CENTER" text="Imagem do Veículo" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -38,14 +38,14 @@
             </HBox>
          </top>
          <bottom>
-            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="384.0" spacing="20.0" BorderPane.alignment="CENTER">
+            <HBox fx:id="hbEscolherImg" alignment="CENTER" prefHeight="40.0" prefWidth="384.0" spacing="20.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label text="Escolher imagem:">
+                  <Label fx:id="lblEscolherImg" text="Escolher imagem:">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Button alignment="CENTER" cancelButton="true" minWidth="120.0" mnemonicParsing="false" text="Procurar..." textAlignment="CENTER">
+                  <Button fx:id="btnProcurar" alignment="CENTER" cancelButton="true" minWidth="120.0" mnemonicParsing="false" onAction="#procurarImagem" text="Procurar..." textAlignment="CENTER">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -56,6 +56,6 @@
       </BorderPane>
    </top>
    <center>
-      <ImageView fitHeight="180.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+      <ImageView fx:id="imgVCenter" fitHeight="180.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>

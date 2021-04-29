@@ -10,16 +10,16 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="411.0" prefWidth="486.0" stylesheets="telasFX/produtoFXML.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="telasFX.ProdutoFXMLController">
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="411.0" prefWidth="486.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.VisualizarLocacaoController">
    <bottom>
-      <HBox alignment="CENTER" prefHeight="59.0" prefWidth="447.0" spacing="10.0" BorderPane.alignment="CENTER">
+      <HBox fx:id="hbBottom" alignment="CENTER" prefHeight="59.0" prefWidth="447.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Button alignment="CENTER" cancelButton="true" minWidth="120.0" mnemonicParsing="false" text="Voltar" textAlignment="CENTER">
+            <Button fx:id="btnVoltar" alignment="CENTER" cancelButton="true" minWidth="120.0" mnemonicParsing="false" onAction="#mudarCenaVoltar" text="Voltar" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" defaultButton="true" minWidth="120.0" mnemonicParsing="false" text="Próximo" textAlignment="CENTER">
+            <Button fx:id="btnProx" alignment="CENTER" defaultButton="true" minWidth="120.0" mnemonicParsing="false" onAction="#mudarCenaProx" text="Próximo" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
@@ -28,9 +28,9 @@
       </HBox>
    </bottom>
    <top>
-      <HBox alignment="CENTER" prefHeight="45.0" prefWidth="384.0" BorderPane.alignment="CENTER">
+      <HBox fx:id="hbTop" alignment="CENTER" prefHeight="45.0" prefWidth="384.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Locação Escolhida" textAlignment="CENTER">
+            <Label fx:id="lblLocEscolhida" alignment="CENTER" contentDisplay="CENTER" text="Locação Escolhida" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -39,118 +39,118 @@
       </HBox>
    </top>
    <left>
-      <VBox prefHeight="307.0" prefWidth="240.0" BorderPane.alignment="CENTER">
+      <VBox fx:id="vbLeft" prefHeight="307.0" prefWidth="240.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox prefHeight="29.0" prefWidth="212.0">
+            <HBox fx:id="hbCodLoc" prefHeight="29.0" prefWidth="212.0">
                <children>
-                  <Label text="Código da Locação:">
+                  <Label fx:id="lblCodLoc" text="Código da Locação:">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="10.0" layoutY="10.0" text="&lt;label&gt;">
+                  <Label fx:id="lblCodLocDados" layoutX="10.0" layoutY="10.0" text="&lt;label&gt;">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="10.0" prefHeight="29.0" prefWidth="212.0">
+            <HBox fx:id="hbRenavan" layoutX="10.0" layoutY="10.0" prefHeight="29.0" prefWidth="212.0">
                <children>
-                  <Label text="Renavan:">
+                  <Label fx:id="lblRenavan" text="Renavan:">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label text="&lt;label&gt;">
+                  <Label fx:id="lblRenavanDados" text="&lt;label&gt;">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="39.0" prefHeight="29.0" prefWidth="212.0">
+            <HBox fx:id="hbPlaca" layoutX="10.0" layoutY="39.0" prefHeight="29.0" prefWidth="212.0">
                <children>
-                  <Label text="Placa:">
+                  <Label fx:id="lblPlaca" text="Placa:">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label text="&lt;label&gt;">
+                  <Label fx:id="lblPlacaDados" text="&lt;label&gt;">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="68.0" prefHeight="29.0" prefWidth="212.0">
+            <HBox fx:id="hbMarca" layoutX="10.0" layoutY="68.0" prefHeight="29.0" prefWidth="212.0">
                <children>
-                  <Label text="Marca:">
+                  <Label fx:id="lblMarca" text="Marca:">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label text="&lt;label&gt;">
+                  <Label fx:id="lblMarcaDados" text="&lt;label&gt;">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="97.0" prefHeight="29.0" prefWidth="212.0">
+            <HBox fx:id="hbKm" layoutX="10.0" layoutY="97.0" prefHeight="29.0" prefWidth="212.0">
                <children>
-                  <Label layoutX="59.0" layoutY="10.0" text="Km:">
+                  <Label fx:id="lblKm" layoutX="59.0" layoutY="10.0" text="Km:">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label text="&lt;label&gt;">
+                  <Label fx:id="lblKmDados" text="&lt;label&gt;">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="126.0" prefHeight="29.0" prefWidth="212.0">
+            <HBox fx:id="hbTipoLoc" layoutX="10.0" layoutY="126.0" prefHeight="29.0" prefWidth="212.0">
                <children>
-                  <Label layoutX="59.0" layoutY="10.0" text="Tipo Locação:">
+                  <Label fx:id="lblTipoLoc" layoutX="59.0" layoutY="10.0" text="Tipo Locação:">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label text="&lt;label&gt;">
+                  <Label fx:id="lblTipoLocDados" text="&lt;label&gt;">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="155.0" prefHeight="29.0" prefWidth="212.0">
+            <HBox fx:id="hbQtdDiarias" layoutX="10.0" layoutY="155.0" prefHeight="29.0" prefWidth="212.0">
                <children>
-                  <Label layoutX="59.0" layoutY="10.0" text="Quant. Diárias:">
+                  <Label fx:id="lblQtdDiarias" layoutX="59.0" layoutY="10.0" text="Quant. Diárias:">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label text="&lt;label&gt;">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
-            <HBox layoutX="10.0" layoutY="184.0" prefHeight="21.0" prefWidth="212.0">
-               <children>
-                  <Label layoutX="59.0" layoutY="10.0" text="Descrição:">
+                  <Label fx:id="lblQtdDiariasDados" text="&lt;label&gt;">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <HBox prefHeight="81.0" prefWidth="212.0">
+            <HBox fx:id="hbDesc" layoutX="10.0" layoutY="184.0" prefHeight="21.0" prefWidth="212.0">
                <children>
-                  <TextArea prefHeight="92.0" prefWidth="212.0" />
+                  <Label fx:id="lblDesc" layoutX="59.0" layoutY="10.0" text="Descrição:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="hbDescTxt" prefHeight="81.0" prefWidth="212.0">
+               <children>
+                  <TextArea fx:id="txtDesc" prefHeight="92.0" prefWidth="212.0" />
                </children>
             </HBox>
          </children>
@@ -163,119 +163,119 @@
       </VBox>
    </left>
    <right>
-      <VBox prefHeight="307.0" prefWidth="233.0" BorderPane.alignment="CENTER">
+      <VBox fx:id="vbRight" prefHeight="307.0" prefWidth="233.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox prefHeight="29.0" prefWidth="212.0" />
-            <HBox layoutX="10.0" layoutY="10.0" prefHeight="29.0" prefWidth="212.0">
+            <HBox fx:id="hbNada" prefHeight="29.0" prefWidth="212.0" />
+            <HBox fx:id="hbModelo" layoutX="10.0" layoutY="10.0" prefHeight="29.0" prefWidth="212.0">
                <children>
-                  <Label text="Modelo:">
+                  <Label fx:id="lblModelo" text="Modelo:">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label text="&lt;modelo&gt;">
+                  <Label fx:id="lblModeloDados" text="&lt;modelo&gt;">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="39.0" prefHeight="29.0" prefWidth="212.0">
+            <HBox fx:id="hbAno" layoutX="10.0" layoutY="39.0" prefHeight="29.0" prefWidth="212.0">
                <children>
-                  <Label text="Ano:">
+                  <Label fx:id="lblAno" text="Ano:">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label text="&lt;label&gt;">
+                  <Label fx:id="lblAnoDados" text="&lt;label&gt;">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="68.0" prefHeight="29.0" prefWidth="212.0">
+            <HBox fx:id="hbDataLoc" layoutX="10.0" layoutY="68.0" prefHeight="29.0" prefWidth="212.0">
                <children>
-                  <Label layoutX="59.0" layoutY="10.0" text="Data Locação">
+                  <Label fx:id="lblDataLoc" layoutX="59.0" layoutY="10.0" text="Data Locação:">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label text="&lt;label&gt;">
+                  <Label fx:id="lblDataLocDados" text="&lt;label&gt;">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="97.0" prefHeight="29.0" prefWidth="212.0">
+            <HBox fx:id="hbDataDev" layoutX="10.0" layoutY="97.0" prefHeight="29.0" prefWidth="212.0">
                <children>
-                  <Label layoutX="59.0" layoutY="10.0" text="Data Devolução:">
+                  <Label fx:id="lblDataDev" layoutX="59.0" layoutY="10.0" text="Data Devolução:">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label text="&lt;label&gt;">
+                  <Label fx:id="lblDataDevDados" text="&lt;label&gt;">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="126.0" prefHeight="29.0" prefWidth="212.0">
+            <HBox fx:id="hbValorUnit" layoutX="10.0" layoutY="126.0" prefHeight="29.0" prefWidth="212.0">
                <children>
-                  <Label layoutX="59.0" layoutY="10.0" text="Valor Unitário:">
+                  <Label fx:id="lblValorUnit" layoutX="59.0" layoutY="10.0" text="Valor Unitário:">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label text="&lt;label&gt;">
+                  <Label fx:id="lblValorUnitDados" text="&lt;label&gt;">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="155.0" prefHeight="29.0" prefWidth="212.0">
+            <HBox fx:id="hbValorSeg" layoutX="10.0" layoutY="155.0" prefHeight="29.0" prefWidth="212.0">
                <children>
-                  <Label layoutX="59.0" layoutY="10.0" text="Valor Seguro:">
+                  <Label fx:id="lblValorSeg" layoutX="59.0" layoutY="10.0" text="Valor Seguro:">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label text="&lt;label&gt;">
+                  <Label fx:id="lblValorSegDados" text="&lt;label&gt;">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="184.0" prefHeight="29.0" prefWidth="212.0">
+            <HBox fx:id="hbValorTot" layoutX="10.0" layoutY="184.0" prefHeight="29.0" prefWidth="212.0">
                <children>
-                  <Label layoutX="59.0" layoutY="10.0" text="Valor Total:">
+                  <Label fx:id="lblValorTot" layoutX="59.0" layoutY="10.0" text="Valor Total:">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label text="&lt;label&gt;">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
-            <HBox layoutX="10.0" layoutY="213.0" prefHeight="21.0" prefWidth="212.0">
-               <children>
-                  <Label layoutX="59.0" layoutY="10.0" text="Seguro Extra:">
+                  <Label fx:id="lblValorTotDados" text="&lt;label&gt;">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="242.0" prefHeight="29.0" prefWidth="212.0">
+            <HBox fx:id="hbSeguroExt" layoutX="10.0" layoutY="213.0" prefHeight="21.0" prefWidth="212.0">
                <children>
-                  <TextField prefHeight="25.0" prefWidth="161.0" />
+                  <Label fx:id="lblSeguroExt" layoutX="59.0" layoutY="10.0" text="Seguro Extra:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="hbSeguroExtTxt" layoutX="10.0" layoutY="242.0" prefHeight="29.0" prefWidth="212.0">
+               <children>
+                  <TextField fx:id="txtSeguroExt" prefHeight="25.0" prefWidth="161.0" />
                </children>
             </HBox>
          </children>
