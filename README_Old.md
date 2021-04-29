@@ -1,9 +1,13 @@
-Catchau - Sistema de Locação de Veículos
+# Catchau - Sistema de Locação de Veículos
 Sistema de locação de carros para a disciplina de Programação de Aplicativos, 2021.
 
 Lista de itens para desenvolver:
-Tela Inicial [FEITO]
-• 4 botões que levam para cada uma das telas: • Cadastro de veículos;
+
+## Tela Inicial [FEITO]
+
+• 4 botões que levam para cada uma das telas:
+
+• Cadastro de veículos;
 
 • Cadastro de clientes;
 
@@ -11,7 +15,7 @@ Tela Inicial [FEITO]
 
 • Relatórios;
 
-Tela Cadastro de Veículos [FEITO]
+## Tela Cadastro de Veículos [FEITO]
 • Campos de texto para os dados
 
 ◦ Número do RENAVAN;
@@ -36,7 +40,7 @@ Tela Cadastro de Veículos [FEITO]
 
 • Imagem do veículo;
 
-Tela Cadastro de Clientes [FEITO]
+## Tela Cadastro de Clientes [FEITO]
 • Opção para escolher se é cliente físico ou jurídico;
 
 • Tipo do cliente:
@@ -77,16 +81,15 @@ Tela Cadastro de Clientes [FEITO]
 
 • Botão que leva a tela de cadastro de condutor;
 
-Tela Cadastro de Motorista
+## Tela Cadastro de Motorista
 • Condutor – dados:
 
 ◦ Número e tipo da carteira de Habilitação do condutor;
 
 ◦ Contatos, telefones e E-mail;
 
-Tela Cadastro de Locação
-Locação:
-◦ Seleção do cliente;
+## Tela Cadastro de Locação
+### Seleção do cliente;
 
 • Buscar um cliente já cadastrado OU
 
@@ -98,14 +101,14 @@ Locação:
 
 ▪ Quando o cliente está bloqueado um aviso é mostrado.
 
-Seleção do condutor;
+### Seleção do condutor;
 • Possível buscar os diversos condutores já cadastrados para o cliente OU
 
 • Incluir novos condutores;
 
 ▪ Opção padrão = primeiro condutor cadastrado junto com os dados do cliente.
 
-Seleção do veículo;
+### Seleção do veículo;
 • Buscar os veículos por Renavan ou por placa;
 
 ◦ Veículo com manutenção vencida = um aviso será mostrado, mas a seleção não será impedida.
@@ -146,7 +149,8 @@ Seleção do veículo;
 
 • É possível ainda incluir um texto e um valor de acréscimo, como por exemplo seguro extra, e este valor será cobrado uma única vez no primeiro faturamento.
 
-Impressão do comprovante de entrega do veículo
+### Impressão do comprovante de entrega do veículo
+
 ▪ Placa;
 
 ▪ Modelo/marca do veículo
@@ -157,10 +161,12 @@ Impressão do comprovante de entrega do veículo
 
 ▪ Valor da locação.
 
-Renovação de Locação:
+## Renovação de Locação:
+
 ◦ Digitar o número do contrato e clicar no botão BUSCAR: os itens locados no contrato serão apresentados e o usuário poderá escolher renovar por igual período ou renovar por período diferente;
 
-Devolução de veículo:
+## Devolução de veículo:
+
 ◦ Buscar o contrato que terá o veículo devolvido pelo nome do cliente ou pelo número do contrato;
 
 ◦ Após selecionar o veículo a ser devolvido, o usuário deve checar a data e a hora da devolução.
